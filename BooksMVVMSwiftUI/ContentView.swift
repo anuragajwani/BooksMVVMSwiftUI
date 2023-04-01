@@ -27,7 +27,7 @@ extension Date {
 }
 
 struct BookCell: View {
-    let book: Book
+    let book: BookCellViewData
     
     var body: some View {
         VStack {
@@ -37,7 +37,7 @@ struct BookCell: View {
                 Spacer()
             }
             HStack {
-                Text("\(book.authors.joined(separator: ", ")) ⚬ \(book.publicationDate.getYear())")
+                Text(book.substitle)
                     .font(.caption)
                 Spacer()
             }
@@ -50,13 +50,11 @@ struct BookCell: View {
     }
 }
 
-struct ContentView: View {
-    @State private var books: [Book] = []
-    
-    private let booksRepository: BooksRepository = DefaultBooksRepository()
+struct BookListView: View {
+    @ObservedObject private var viewModel = ViewModel(booksRepository: DefaultBooksRepository())
     
     var body: some View {
-        List(books) { book in
+        List(viewModel.books) { book in
             BookCell(book: book)
                 .listRowSeparator(.hidden)
         }
@@ -64,8 +62,14 @@ struct ContentView: View {
         .scrollContentBackground(.hidden)
         .padding()
         .onAppear(perform: {
-            self.books = self.booksRepository.get()
+            self.viewModel.fetchBooks()
         })
+    }
+}
+
+struct ContentView: View {
+    var body: some View {
+        BookListView()
     }
 }
 
@@ -95,5 +99,33 @@ class DefaultBooksRepository: BooksRepository {
     
     func get() -> [Book] {
         return books
+    }
+}
+
+struct BookCellViewData: Identifiable {
+    let id: String
+    let title: String
+    let substitle: String
+}
+
+extension BookListView {
+    class ViewModel: ObservableObject {
+        @Published var books: [BookCellViewData] = []
+
+        private let booksRepository: BooksRepository
+
+        init(booksRepository: BooksRepository) {
+            self.booksRepository = booksRepository
+        }
+
+        func fetchBooks() {
+            let books = self.booksRepository.get().map { book in
+                let substitle = "\(book.authors.joined(separator: ", ")) ⚬ \(book.publicationDate.getYear())"
+                return BookCellViewData(id: book.id,
+                                        title: book.title,
+                                        substitle: substitle)
+            }
+            self.books = books
+        }
     }
 }
