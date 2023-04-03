@@ -102,7 +102,7 @@ class DefaultBooksRepository: BooksRepository {
     }
 }
 
-struct BookCellViewData: Identifiable {
+struct BookCellViewData: Identifiable, Equatable {
     let id: String
     let title: String
     let substitle: String

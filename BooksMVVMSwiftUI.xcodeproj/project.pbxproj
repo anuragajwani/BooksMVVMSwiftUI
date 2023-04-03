@@ -11,7 +11,18 @@
 		7FD6BC2029D77BD3007C78A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6BC1F29D77BD3007C78A9 /* ContentView.swift */; };
 		7FD6BC2229D77BD3007C78A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD6BC2129D77BD3007C78A9 /* Assets.xcassets */; };
 		7FD6BC2529D77BD3007C78A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD6BC2429D77BD3007C78A9 /* Preview Assets.xcassets */; };
+		7FD6BC4929D8ED1A007C78A9 /* BookListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD6BC4829D8ED1A007C78A9 /* BookListViewModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7FD6BC4329D8ED11007C78A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7FD6BC1229D77BD2007C78A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7FD6BC1929D77BD3007C78A9;
+			remoteInfo = BooksMVVMSwiftUI;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7FD6BC1A29D77BD3007C78A9 /* BooksMVVMSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BooksMVVMSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +30,19 @@
 		7FD6BC1F29D77BD3007C78A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7FD6BC2129D77BD3007C78A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FD6BC2429D77BD3007C78A9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7FD6BC3F29D8ED11007C78A9 /* BooksMVVMSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BooksMVVMSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FD6BC4829D8ED1A007C78A9 /* BookListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7FD6BC1729D77BD3007C78A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FD6BC3C29D8ED11007C78A9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				7FD6BC1C29D77BD3007C78A9 /* BooksMVVMSwiftUI */,
+				7FD6BC4029D8ED11007C78A9 /* BooksMVVMSwiftUITests */,
 				7FD6BC1B29D77BD3007C78A9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				7FD6BC1A29D77BD3007C78A9 /* BooksMVVMSwiftUI.app */,
+				7FD6BC3F29D8ED11007C78A9 /* BooksMVVMSwiftUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +89,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		7FD6BC4029D8ED11007C78A9 /* BooksMVVMSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7FD6BC4829D8ED1A007C78A9 /* BookListViewModelTests.swift */,
+			);
+			path = BooksMVVMSwiftUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -87,6 +117,24 @@
 			productReference = 7FD6BC1A29D77BD3007C78A9 /* BooksMVVMSwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7FD6BC3E29D8ED11007C78A9 /* BooksMVVMSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FD6BC4729D8ED11007C78A9 /* Build configuration list for PBXNativeTarget "BooksMVVMSwiftUITests" */;
+			buildPhases = (
+				7FD6BC3B29D8ED11007C78A9 /* Sources */,
+				7FD6BC3C29D8ED11007C78A9 /* Frameworks */,
+				7FD6BC3D29D8ED11007C78A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7FD6BC4429D8ED11007C78A9 /* PBXTargetDependency */,
+			);
+			name = BooksMVVMSwiftUITests;
+			productName = BooksMVVMSwiftUITests;
+			productReference = 7FD6BC3F29D8ED11007C78A9 /* BooksMVVMSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +147,10 @@
 				TargetAttributes = {
 					7FD6BC1929D77BD3007C78A9 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					7FD6BC3E29D8ED11007C78A9 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 7FD6BC1929D77BD3007C78A9;
 					};
 				};
 			};
@@ -116,6 +168,7 @@
 			projectRoot = "";
 			targets = (
 				7FD6BC1929D77BD3007C78A9 /* BooksMVVMSwiftUI */,
+				7FD6BC3E29D8ED11007C78A9 /* BooksMVVMSwiftUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +180,13 @@
 			files = (
 				7FD6BC2529D77BD3007C78A9 /* Preview Assets.xcassets in Resources */,
 				7FD6BC2229D77BD3007C78A9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FD6BC3D29D8ED11007C78A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +202,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7FD6BC3B29D8ED11007C78A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FD6BC4929D8ED1A007C78A9 /* BookListViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7FD6BC4429D8ED11007C78A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7FD6BC1929D77BD3007C78A9 /* BooksMVVMSwiftUI */;
+			targetProxy = 7FD6BC4329D8ED11007C78A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7FD6BC2629D77BD3007C78A9 /* Debug */ = {
@@ -315,6 +391,40 @@
 			};
 			name = Release;
 		};
+		7FD6BC4529D8ED11007C78A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anuragajwani.BooksMVVMSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BooksMVVMSwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BooksMVVMSwiftUI";
+			};
+			name = Debug;
+		};
+		7FD6BC4629D8ED11007C78A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anuragajwani.BooksMVVMSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BooksMVVMSwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BooksMVVMSwiftUI";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -332,6 +442,15 @@
 			buildConfigurations = (
 				7FD6BC2929D77BD3007C78A9 /* Debug */,
 				7FD6BC2A29D77BD3007C78A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FD6BC4729D8ED11007C78A9 /* Build configuration list for PBXNativeTarget "BooksMVVMSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FD6BC4529D8ED11007C78A9 /* Debug */,
+				7FD6BC4629D8ED11007C78A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
